@@ -7,8 +7,12 @@ var _angular2 = _interopRequireDefault(_angular);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_angular2.default.module('music-chamber', []).controller('sheetsController', function () {
-  this.sheets = ["Sheet one", "Sheet two"];
+_angular2.default.module('music-chamber', []).controller('sheetsController', function ($http) {
+  var _this = this;
+
+  $http.get('/sheets').then(function (response) {
+    _this.sheets = response.data;
+  });
 });
 
 },{"angular":3}],2:[function(require,module,exports){

@@ -1,5 +1,7 @@
 import angular from 'angular';
 angular.module('music-chamber', [])
-.controller('sheetsController', function() {
-  this.sheets = ["Sheet one", "Sheet two"]
+.controller('sheetsController', function($http) {
+  $http.get('/sheets').then((response) => {
+    this.sheets = response.data;
+  });
 })
