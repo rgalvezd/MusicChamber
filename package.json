@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp watch --gulpfile client/gulpfile.babel.js"
   },
-  "author": "Rodrigo Gálvez <rodrigogalvezdiaz@outlook.com>",
+  "author": "Rodrigo Gálvez <rodrigogalvezdiaz@outlook.com> (https://github.com/rgalvezd)",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.8"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",

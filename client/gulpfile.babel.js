@@ -4,9 +4,9 @@ import source from "vinyl-source-stream";
 
 gulp.task("default", ["transpile"]);
 
-gulp.task("transpile", ()=> {
+gulp.task("transpile", () => {
 
-  return browserify("scr/app.js")
+  return browserify("src/app.js")
     .transform("babelify")
     .bundle()
     .on("error", function(error) {
